@@ -43,8 +43,7 @@ const ll NINF = LLONG_MIN;
 
 vecBool isPrime(1e6 + 10, true);
 
-void generatePrimes()
-{
+void generatePrimes() {
     isPrime[0] = isPrime[1] = false;
     for (int i = 2; i * i <= (ll)(1e6 + 10); i++)
     {
@@ -56,8 +55,7 @@ void generatePrimes()
     }
 }
 
-ll nextPrime(ll n)
-{
+ll nextPrime(ll n) {
     while (!isPrime[n])
     n++;
 
@@ -66,15 +64,13 @@ ll nextPrime(ll n)
 
 vec divisorsCnt(1e6 + 1, 0);
 
-void getDivisors()
-{
+void getDivisors() {
     for (ll i = 1; i <= (ll)(1e6 + 1); i++)
     for (ll j = i; j <= (ll)(1e6 + 1); j += i)
     divisorsCnt[j]++;
 }
 
-bool isPalindrome(string s)
-{
+bool isPalindrome(string s) {
     int i = 0, j = sz(s) - 1;
     while (i < j)
     if (s[i++] != s[j--])
@@ -83,8 +79,7 @@ bool isPalindrome(string s)
     return true;
 }
 
-vec arrayCreation(ll n)
-{
+vec arrayCreation(ll n) {
     vec a(n);
     for (auto &x : a)
     cin >> x;
@@ -92,13 +87,11 @@ vec arrayCreation(ll n)
     return a;
 }
 
-void solve()
-{
+void solve() {
     ll n;
     cin >> n;
 
-    while (n > 1)
-    {
+    while (n > 1) {
         cout << n << " ";
 
         if (n & 1)
@@ -110,8 +103,7 @@ void solve()
     cout << 1;
 }
 
-int main()
-{
+int main() {
     ll t = 1;
     // cin >> t;
 
