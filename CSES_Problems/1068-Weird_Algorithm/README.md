@@ -54,10 +54,8 @@ vecBool isPrime(1e6 + 10, true);
 
 void generatePrimes() {
     isPrime[0] = isPrime[1] = false;
-    for (int i = 2; i * i <= (ll)(1e6 + 10); i++)
-    {
-        if (isPrime[i])
-        {
+    for (int i = 2; i * i <= (ll)(1e6 + 10); i++) {
+        if (isPrime[i]) {
             for (int j = i * i; j <= (ll)(1e6 + 10); j += i)
             isPrime[j] = false;
         }
